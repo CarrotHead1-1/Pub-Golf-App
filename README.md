@@ -44,8 +44,6 @@ The **Pub Golf App** is a mobile application inspired by the popular social drin
 - **Google Maps Container**: Displays current location marker
 - **New Game Button**: Starts a new game with a new route and challenge set
 
-![image](images/MainPage.PNG)
-
 ### 📝 Scorecard Page
 
 - **Initial View**: Player list and scores displayed on first app load
@@ -55,16 +53,11 @@ The **Pub Golf App** is a mobile application inspired by the popular social drin
 - **Horizontal Scroll**: View all scores across the 9 locations
 - **Navigation**: App bar allows return to main screen
 
-![image](images/EmptyScoreCard.PNG) ![image](images/AddingScores.PNG) ![image](images/DeletingScores.PNG)
-
 ### 🗺️ Map Page
 
 - Larger Google Maps view
 - Current and next locations are displayed with corresponding postcodes
 - “End of Route” is shown when the final destination is reached
-
-- ![image](images/MapPage.PNG)
-
 
 ---
 
@@ -113,3 +106,82 @@ The **Pub Golf App** is a mobile application inspired by the popular social drin
 - Corporate team-building activities
 - Pub crawls for friend groups
 - Social mixers
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Flutter SDK](https://docs.flutter.dev/get-started/install)
+- Dart SDK (comes with Flutter)
+- Android Studio or Visual Studio Code with Flutter extensions
+- An emulator or physical device
+
+### Running the App
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/pub-golf-app.git
+   cd pub-golf-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
+
+3. Run the app:
+   ```bash
+   flutter run
+   ```
+
+---
+
+## 🗺️ Google Maps API Key Setup
+
+To enable full functionality of the Google Maps features in the app, you must add your own **Google Maps API key**.
+
+### Steps:
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new project (or use an existing one).
+3. Navigate to **APIs & Services > Credentials**.
+4. Click **Create Credentials > API key**.
+5. Enable the following APIs:
+   - Maps SDK for Android
+   - Maps SDK for iOS
+6. Copy your API key.
+
+### Add the API Key to Your Project
+
+**For Android:**
+
+Edit the `android/app/src/main/AndroidManifest.xml` file and add your key inside the `<application>` tag:
+
+```xml
+<meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="YOUR_API_KEY_HERE"/>
+```
+
+**For iOS:**
+
+Edit the `ios/Runner/AppDelegate.swift` (or `AppDelegate.m` if using Objective-C) and insert:
+
+```swift
+GMSServices.provideAPIKey("YOUR_API_KEY_HERE")
+```
+
+Also ensure the following is in your `ios/Runner/Info.plist`:
+
+```xml
+<key>io.flutter.embedded_views_preview</key>
+<true/>
+```
+
+---
+
+Now you’re ready to use the full functionality of the Pub Golf App with interactive maps!
