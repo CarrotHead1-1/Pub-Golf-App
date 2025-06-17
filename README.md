@@ -43,7 +43,9 @@ The **Pub Golf App** is a mobile application inspired by the popular social drin
 - **Location Container**: Shows current location with next/previous navigation
 - **Google Maps Container**: Displays current location marker
 - **New Game Button**: Starts a new game with a new route and challenge set
-
+  
+- ![Alt text](images/MainPage.PNG)
+  
 ### 📝 Scorecard Page
 
 - **Initial View**: Player list and scores displayed on first app load
@@ -53,12 +55,15 @@ The **Pub Golf App** is a mobile application inspired by the popular social drin
 - **Horizontal Scroll**: View all scores across the 9 locations
 - **Navigation**: App bar allows return to main screen
 
+- ![Alt text](images/AddingScores.PNG) ![Alt text](images/DeletingScores.PNG) ![Alt text](images/EmptyScoreCard.PNG)
+
 ### 🗺️ Map Page
 
 - Larger Google Maps view
 - Current and next locations are displayed with corresponding postcodes
 - “End of Route” is shown when the final destination is reached
 
+- ![Alt text](images/MapPage.PNG)
 ---
 
 ## 🔁 Core Functions
